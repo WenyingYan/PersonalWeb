@@ -1,0 +1,300 @@
+/* Styles */
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	/*  remove default style */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.jobSubtitle{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.schSubtitle{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+
+/* header section
+==================================================*/
+
+
+.header {
+    background-color: #FFFFFF;
+	padding: 0px 0px 0px 0px;
+	height: 60px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 50;}
+
+nav{
+	display: flex; 
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;  	/*Relative to 1% of the height of the viewport* */
+	/* background-color:  */
+	font-family: 'Poiret One', cursive;
+
+    
+
+	
+}
+.nav-links{
+	display: flex; 
+	/* color: white; */
+	justify-content: space-around;
+	width: 300px;
+	/* witdh: 30% is not good since the space between will collapse when we narrow the window */
+	color:#9fa4a8;
+
+
+}
+
+.nav-links li{
+	list-style: none;
+}
+
+.nav-links a{
+	text-decoration:none;
+	color:#9fa4a8;
+	/* letter-spacing: 1px; */
+	font-weight: bold;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+/* home section
+==================================================*/
+
+.home {
+/*     background: url(../images/Yosemite.JPG); */
+    background-image: url("https://dl.dropboxusercontent.com/s/ip0p0j806ejrovn/Yosemite.JPG");
+  
+    background-size: cover;
+    height: 100vh;
+}
+
+.table-cell {
+    display: table-cell;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color:#A9A9A9;
+    font-family: 'Pinyon Script', cursive;
+	font-size: 20px;
+
+    
+}
+
+
+.disply-table {
+    display: table;
+    height: 100vh;
+}
+
+
+
+ @media screen and (max-width:1028px) {
+ 
+ .table-cell {
+    display: table-cell;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color:#A9A9A9;
+    font-family: 'Pinyon Script', cursive;
+
+	font-size: 20px;
+
+    
+}
+
+}
+
+
+
+/* About==================================================*/
+/* prevent doesn't roll to the right position */
+#About {
+    padding: 10px 0;
+  
+}
+
+
+
+.position {
+    margin: 50px 20px;
+    text-align: center;
+    color:#A9A9A9;
+    font-family: 'Pinyon Script', cursive;
+	font-size: 20px;
+}
+
+img.align-center {
+    display: block;
+    margin: 0px auto;
+    }
+    
+p.description{
+    text-align: center;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    color:#808080;
+   
+}
+
+
+/* Work==================================================*/
+
+#Work {
+    padding: 75px 0;
+    
+}
+
+.jobExp {
+    width:750px;
+    
+    margin-left: auto;
+    margin-right: auto;
+	/* margin:0 auto; */
+/*   You can set the margin property to auto to horizontally center the element within its container. */
+}
+
+img.comLogo {
+width: 70px;
+height: 70px;
+float:left;
+}
+
+.copTitle{
+    width:600px;
+    margin-left:10px;
+    margin-top:10px;
+    float:left;
+
+    font-size:15px;
+    font-weight:bold;
+}
+
+.workDate{
+  width:600px;
+    margin-left:10px ;
+
+	float:left;
+  font-size:15px;
+} 
+
+.jobTitle{
+  width:600px;
+	margin-left:10px ;
+  margin-top:20px;
+	float:left;
+  font-size:13px;
+  font-weight:bold;
+}
+.jobLocation{
+  width:600px;
+  margin-left:80px;
+    margin-bottom:20px;
+  float:left;
+  font-size:13px;
+
+}
+
+.jobDescrip {
+  /* width:800px; */
+  margin-left:80px;
+  margin-bottom:20px;
+  float:left;
+  font-size:15px;
+
+}
+
+
+/* Education==================================================*/
+
+#Bkg {
+    padding: 80px 0; 
+}
+
+
+.Education {
+    width:750px;
+    margin-left: auto;
+    margin-right: auto;
+	/* margin:0 auto; */
+/*   You can set the margin property to auto to horizontally center the element within its container. */
+}
+
+img.schLogo {
+width: 50px;
+height: 50px;
+margin-top:15px;
+float:left;
+}
+
+.schTitle{
+  width:600px;
+	margin-left:30px;
+  margin-top:10px;
+  float:left;
+
+  font-size:15px;
+  font-weight:bold;
+}
+
+.schDate{
+  width:600px;
+	margin-left:30px;
+
+	float:left;
+  font-size:15px;
+}
+
+.schTitle{
+  width:600px;
+	margin-left:30px ;
+  margin-top:20px;
+	float:left;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.schLocation{
+  width:600px;
+  margin-left:80px;
+ 	margin-bottom:20px;
+  float:left;
+  font-size:13px;
+
+}
+
+.schDescrip{
+  /* width:800px; */
+  margin-left:80px;
+ 	margin-bottom:20px;
+  float:left;
+  font-size:15px;
+
+}
+

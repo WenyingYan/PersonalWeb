@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html data-ng-app lang="en">
+		<head><meta name="description" content="Hi! I'm Yi Tian Xu and welcome to by personal website :)"><meta name="keywords" content="Yi Tian Xu"><meta name="author" content="Yi Tian Xu">
+			<title>Yi Tian Xu</title>
+
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+			<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Megrim|Raleway|Poiret+One" type="text/css">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" type="text/css">
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+			</script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+			</script>
+			<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+			</script>
+			<link rel="stylesheet" href="./assets/home/main.css?v=0.3">
+		</head>
+
+		<body ng-app="homepage" ng-controller="homepageCtrl">
+			<div id="menu">
+			 	<div id="projectMenu" data-sr="enter left and move 21px" data-scroll="projects" class="menu-item">
+			 		Projects
+			 	</div>
+			 	<div id="blogMenu" data-sr="enter left and move 34px" data-scroll="publications" class="menu-item">
+			 		Publications
+			 	</div>
+			 	<div id="aboutMenu" data-sr="enter left and move 55px" data-scroll="about" class="menu-item">
+			 		About
+			 	</div>
+		  	</div>
+			<div id="titleContainer">
+				<div data-sr="ease-in 21px" class="title">
+					<a href="index.html" class="gold_shadow">Yi Tian Xu</a>
+					<p>MSc &mdash; Comp. Sc.</p>
+				</div>
+				<div class="centerMiddle"><canvas id="logoAnimate"></canvas></div>
+			</div>
+			<div id="contact-links" data-sr="ease-in 21px, reset">
+				<a href="https://www.linkedin.com/in/yitianxu/" target="_blank" class="gold_shadow"><i class="fab fa-linkedin"></i></a>
+				<a href="https://github.com/ytixu" target="_blank" class="gold_shadow"><i class="fab fa-github-square"></i></a>
+				<a href="mailto:goldenratioesp@gmail.com" title="goldenratioesp@gmail.com" class="gold_shadow"><i class="fa fa-envelope-square"></i></a>
+				<a href="https://www.goodreads.com/ytixu" target="_blank" class="gold_shadow"><i class="fab fa-goodreads"></i>
+				</a>
+			</div>
+			<div id="content">
+				<div>
+					<div id="projects" data-sr="enter left and move 60px, reset" class="title">	
+						Projects
+					</div>
+					<div class="row">
+						<div data-sr="enter top, reset" ng-repeat="proj in proj_record" ng-init="$last ? refresh() : null" class="toggle-blue col-lg-6 col-md-12">
+							<a href="{{proj.link}}" target="_blank" class="project-btn">
+								<h3>
+								{{proj.name}}
+								</h3><img ng-if="proj.img != null" src="{{proj.img}}">
+								<p class="text">
+								{{proj.desc}}
+								</p>
+								<span ng-if="proj.date != null" class="date">{{proj.date}}
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div id="publications" data-sr="enter left and move 60px, reset" class="title">Publications
+					</div>
+					<div class="row">
+						<div data-sr="enter top, reset" class="col-12 toggle-blue text">
+							Yi Tian Xu, <a href="https://www.cs.mcgill.ca/~yli252/" target="_blank">Yaqiao Li</a>, <a href="https://www.cim.mcgill.ca/~dmeger/" target="_blank">David Meger</a>, Human motion prediction via pattern completion in latent representation space, CRV 2019 (16th conference on Computer and Robot Vision).
+						</div>
+						<div data-sr="enter top, reset" class="col-12 toggle-blue text">
+							<a href="http://jurgens.people.si.umich.edu/" target="_blank">David Jurgens</a>, Tyler Finethy, James McCorriston, Yi Tian Xu, <a href="http://www.derekruths.com/" target="_blank">Derek Ruths</a>, <a target="_blank" href="https://www.aaai.org/ocs/index.php/ICWSM/ICWSM15/paper/view/10584/10502">Geolocation Prediction in Twitter Using Social Networks: A Critical Analysis and Review of Current Practice</a>, ICWSM 2015 (Proceedings of the 9th International AAAI Conference on Web and Social Media) <a target="_blank" href="http://networkdynamics.org/resources/geoinference/">[website]</a>
+						</div>
+					</div>
+				</div>
+				<div><img src="assets/images/IMG_20181105_141042.jpg?v=0.1" data-sr="enter top, reset" class="portrait">
+					<div id="about" data-sr="enter left and move 60px, reset" class="title">
+						About
+					</div>
+					<p class="text">I came from China, but my Chinese friends think I'm <i>Québécoise</i> while my Canadian friends think I'm Chinese. Either way, my interest in both cultures keeps me satisfied with any (if not most) classification.</p>
+					<h3>Some Miscellaneous Stuffs</h3>
+					<ul class="text">
+						<li>A <a data-toggle="modal" data-target="#poemModal"> Chinese poem</a> that I wrote.</li>
+						<li>A <a data-toggle="modal" data-target="#cutCakeModal">GIF</a> from a one of my demos.</li>
+						<li>One of the <a target="_blank" href="https://yanjuanpiaobo.blogspot.com/2018/12/blog-post.html">best writings</a> I think I wrote so far<small>, that also got published in a McGill's student magazine</small>.</li>
+						<li>Some <a target="_blank" href="https://photos.app.goo.gl/JxDUEfoaayfbe9NB9">photographies</a> taken during trips.</li>
+						<li>Some <a target="_blank" href="http://ytixu.github.io/food">dishes</a> that I can/want to make.</li>
+						<li>Some (altered) <a target="_blank" href="./misc/red-black-tree/">memories</a> about my undergrads and my friends.</li>
+						<li>My <a target="_blank" href="./HTMLdump/2015/index.html">old github website</a><small>, no longer maintained, but has a list of some fun project I did during my undergrads</small>.</li>
+					</ul>
+				</div>
+			</div>
+			<div id="footer" data-sr="ease-in 21px, reset"><h1><i id="scrollUp" onclick="topFunction()" class="gold_shadow fa fa-angle-up"></i></h1>
+				<div>&#169; Yi Tian Xu<script type="text/javascript">document.write(' ' + ((new Date()).getYear()+1900));</script>
+				</div>
+			</div>
+			<div id="poemModal" role="dialog" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body"><button type="button" aria-label="Close" data-dismiss="modal" class="gold_shadow close"><span aria-hidden="true">&times;</span></button><h2 class="text-left">Chinese Poem</h2>
+							<div class="text"><p>???????</p><p>?????, ?????.<br>?????, ?????.</p></div><p class="text text-left"><i>This poem reflects a person's optimistic spirit for life and boundless creativity even when facing hardship. His imaginations of cloud reflections as boats berthing the setting sun, and waves forming stairs to the heavens, are far different than the reality of his journey of crossing a winter sea. Potentially, he might be stuck with nothing, but he still can sing about the moon, play strings formed by vapor and pour wind as wine. I wrote this poem to remind myself of keeping a good state of mind when facing difficult research problems.</i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="cutCakeModal" role="dialog" class="modal fade">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-body"><button type="button" aria-label="Close" data-dismiss="modal" class="gold_shadow close"><span aria-hidden="true">&times;</span></button><h2 class="text-left">Robot arm cutting cake</h2><p class="text-center"><img src="./assets/images/yitianxu_robot_cut_cake.gif" width="100%"></p><p class="text text-left">What can we do for someone's birthday with a <a href="https://www.kinovarobotics.com/" target="_blank">Kinova</a> robot arm? After our lab agreed to do a robot-cake-cutting video, I came up with the idea of using my old spatula, which has an handle that fits almost perfectly inside the robot's gripper, and a blade thin enough to slice through layers of cake and fillings. Most importantly, cutting with a spatula instead of a knife avoids colliding the gripper with the table and accidental bloodshed. We guided the robot like a pupet over a designed trajectory. The path was recorded and replayed over a real cake. The last slice was unplanned.</p></div>
+					</div>
+				</div>
+			</div></body><script src="http://ytixu.github.io/HTMLdump/2015/script/flower.js"></script><script type="text/javascript" src="http://ytixu.github.io/HTMLdump/2015/node_modules/scrollreveal/dist/scrollReveal.min.js"></script><script src="./assets/js/script.js?v=0.3"></script>
+
+
+</html>
